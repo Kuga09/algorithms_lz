@@ -3,9 +3,10 @@ from random import randint as ri
 start_list = []
 for i in range(0,100):
     start_list.append(ri(0, 1_000_000)) 
+    start_list_1=start_list
 #Сортировка пузырьком
 count_1=0
-sorted_list = start_list
+sorted_list = start_list_1
 stop_flag = True
 while stop_flag is True: 
     stop_flag = False
@@ -17,10 +18,6 @@ while stop_flag is True:
             stop_flag = True
         print(sorted_list)
         count_1+=1
-print('Финально отсортированный список алгоритмом "Сортировка пузырьком":')
-print(sorted_list)
-print('Количество сравнений =',count_1)
-print(' ')
 #Сортировка выбором
 unsorted_list = start_list
 sorted_list = []
@@ -34,6 +31,10 @@ while len(unsorted_list) > 0:
         count_2+=1
     sorted_list.append(max)
     unsorted_list.remove(max)
+print('Финально отсортированный список алгоритмом "Сортировка пузырьком":')
+print(sorted_list)
+print('Количество сравнений =',count_1)
+print(' ')
 print('Финально отсортированный список алгоритмом "Сортировка выбором":')
 print(sorted_list)
 print('Количество сравнений =',count_2)
