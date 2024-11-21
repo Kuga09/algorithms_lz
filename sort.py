@@ -16,8 +16,8 @@ while stop_flag is True:
             sorted_list[i] = sorted_list[i + 1]
             sorted_list[i + 1] = swap
             stop_flag = True
-        print(sorted_list)
-        count_1+=1
+            print(sorted_list)
+            count_1+=1
 #Сортировка выбором
 unsorted_list = start_list
 sorted_list = []
@@ -27,14 +27,14 @@ while len(unsorted_list) > 0:
     for i in range(0, len(unsorted_list)):
         if unsorted_list[i] > max:
             max = unsorted_list[i]
-        print(sorted_list)
-        count_2+=1
     sorted_list.append(max)
     unsorted_list.remove(max)
+    print(sorted_list)
+    count_2+=1
 print('Финально отсортированный список алгоритмом "Сортировка пузырьком":')
 print(sorted_list)
-print('Количество сравнений =',count_1)
+print('Количество перестанвок =',count_1)
 print(' ')
 print('Финально отсортированный список алгоритмом "Сортировка выбором":')
 print(sorted_list)
-print('Количество сравнений =',count_2)
+print('Количество перестановок =',count_2)
